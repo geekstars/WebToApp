@@ -14,6 +14,13 @@
             .slider.round:before { border-radius: 50%; }
         </style>
     </head>
+    <body>
+        <h2 id="value">Toggle Switch is off</h2>
+        <label class="switch">
+            <input type="checkbox" name="myCheckbox">
+            <span class="slider round"></span>
+        </label>
+    </body>
     <script>
     var _selector = document.querySelector('input[name=myCheckbox]');
     _selector.addEventListener('change', function(event) {
@@ -25,11 +32,4 @@
         }
     });
 </script>
-    <body>
-        <h2 id="value">Toggle Switch is off</h2>
-        <label class="switch">
-            <input type="checkbox" name="myCheckbox">
-            <span class="slider round"></span>
-        </label>
-    </body>
 </html>
