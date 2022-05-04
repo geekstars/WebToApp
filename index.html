@@ -14,6 +14,17 @@
             .slider.round:before { border-radius: 50%; }
         </style>
     </head>
+    <script>
+    var _selector = document.querySelector('input[name=myCheckbox]');
+    _selector.addEventListener('change', function(event) {
+        var message = (_selector.checked) ? "Toggle Switch is on" : "Toggle Switch is off";
+        if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.toggleMessageHandler) {
+            window.webkit.messageHandlers.toggleMessageHandler.postMessage({
+                "message": message
+            });
+        }
+    });
+</script>
     <body>
         <h2 id="value">Toggle Switch is off</h2>
         <label class="switch">
